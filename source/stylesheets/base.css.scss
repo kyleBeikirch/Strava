@@ -1,6 +1,7 @@
 
 body{
 	background-image: url(/images/background.png);
+	font-family: 'Roboto', sans-serif;
 	padding: 15px;
 	color: $textColor;
 }
@@ -8,4 +9,13 @@ body{
 footer{
 	position: absolute;
 	bottom: 0px;
+}
+
+a {
+    color: $linkColor;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $linkHover;   
 }
