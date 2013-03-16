@@ -1,0 +1,25 @@
+.facebook-share
+  #fb-root
+  :javascript
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=452525338150549";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));  
+  .fb-like{"data-font" => "trebuchet ms", "data-href" => "http://kylebeikirch.com/strava", "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "false", "data-width" => "450"}
+
+.twitter-share
+  <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://kylebeikirch.com/strava" data-text="See who really is the strongest rider on Strava with this tool">Tweet</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+.google-share
+  .g-plus{"data-action" => "share", "data-annotation" => "bubble", "data-height" => "15"}
+/ Place this tag after the last share tag.
+:javascript
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
