@@ -3,6 +3,7 @@ body{
 	background-image: url(/images/background.png);
 	font-family: 'Roboto', sans-serif;
 	color: $textColor;
+	height: 100%;
 }
 
 header{
@@ -13,16 +14,10 @@ header{
 }
 
 footer{
-	position: absolute;
-	bottom: 0px;
 	height: 50px;
-	width: 100%;
 	line-height: 50px;
 }
 
-header, footer{
-	padding: 0 20px;
-}
 
 h1, h2, h3{
 	font-weight: 900;
