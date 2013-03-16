@@ -2,7 +2,21 @@
 	float:	right;
 }
 
+.stravaLogo{
+	float:	left;
+	margin-right: 10px;
+}
+
 .facebook-share, .twitter-share, .google-share{
-	margin-left: 10px;
 	float: left;
+	position: relative;
+}
+
+.twitter-share{
+	top: 4px;
+	left: 15px;
+}
+
+.google-share{
+	top: 2px;
 }
