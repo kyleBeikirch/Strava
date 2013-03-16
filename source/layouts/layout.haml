@@ -21,11 +21,16 @@
   %body
     /[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
     %header
+      .headerLogo
+        %img{ :src => "images/logo_32.png"}
       .headerTitle
-        Strava Leaderboard
+        STRAVA LEADERBOARD
     %div{:role => "main", :class => "main"}= yield
     %footer
       %img{ :src => "images/strava.png"}
+      .credits
+        Created by Kyle Beikirch
+      .socialLinks
     
     = javascript_include_tag "site"
     
