@@ -26,7 +26,7 @@
           %img{ :src => "images/logo_32.png"}
         .headerTitle
           STRAVA LEADERBOARD
-    %div{:role => "main", :class => "main container_8", :id => "content"}= yield
+    %div{:role => "main", :class => "main container_8", :id => "content"}
     %footer
       .container_8 
         %img{ :src => "images/strava.png", :class => "stravaLogo"}
@@ -34,7 +34,7 @@
           Created by Kyle Beikirch
         .shareLinks
           = partial "views/_shareLinks"
-    
+    = partial "views/_templates"
     = javascript_include_tag "site"
     
     :javascript
