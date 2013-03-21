@@ -11,12 +11,20 @@ window.StartView = Backbone.View.extend({
     },
 
     events:{
-        "submit form#idSubmit": "change",
+        "submit form#idSubmit": "getRider",
     },
 
-    change:function (event) {
+    getRider:function (event) {
         event.preventDefault();
         var stravaID = this.$('input[name=stravaID]').val();
+        var self = this;
+        app.Riders.create(this.model, {
+                success:function () {
+                    app.navigate('wines/' + self.model.id, false);
+                }
+            });
+
+        return false;
  
         Backbone.history.navigate('rider/:' + stravaID, true);
     }
