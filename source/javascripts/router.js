@@ -20,7 +20,7 @@ var AppRouter = Backbone.Router.extend({
     },
 
     start:function () {
-        app.showView('#content', new StartView());
+        app.showView('#content', new StartView({model:new Rider()}));
     },
 
     showRiders:function (id) {

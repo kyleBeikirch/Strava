@@ -2,7 +2,7 @@ window.Rider = Backbone.Model.extend({
     urlRoot:"../api/rider",
     defaults:{
         "id":null,
-        "stravaID": ""
+        "stravaID": "",
         "name":"",
         "location":"",
         "picture":""
