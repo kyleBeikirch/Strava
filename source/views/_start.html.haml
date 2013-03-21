@@ -1,6 +1,6 @@
 %script#template-start{ :type => 'text/x-mustache-template' }
   #welcomeMessage
     Welcome please enter your Strava id below to start
-    %form{:action => "", :method => "post"}
-      %input.text{:name => "username", :placeholder => "Username", :style => "background:url(images/username.png) no-repeat;", :type => "text"}
+    %form{:action => "", :method => "post", :id =>"idSubmit"}
+      %input.text{:name => "stravaID", :placeholder => "Username", :style => "background:url(images/username.png) no-repeat;", :type => "text"}
       %input.submit.button.orange.center{ :type => "submit", :value => "Start"}
