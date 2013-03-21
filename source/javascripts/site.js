@@ -1,5 +1,5 @@
 //= require_directory "./vendor"
-//= require "views/startView"
+//= require_directory "./views"
 //= require "templates"
 
 //= require "router"

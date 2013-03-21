@@ -1,10 +1,11 @@
 Backbone.View.prototype.close = function () {
     console.log('Closing view ' + this);
-    if (this.beforeClose) {
-        this.beforeClose();
-    }
-    this.remove();
-    this.unbind();
+    this.fadeOut('fast', function()
+    {
+        this.remove();
+        this.unbind();
+    })
+    
 };
 
 var AppRouter = Backbone.Router.extend({
@@ -15,20 +16,16 @@ var AppRouter = Backbone.Router.extend({
 
     routes:{
         "":"start",
-        "rider/:id":"showFriends"
+        "rider/:id":"showRiders"
     },
 
     start:function () {
         app.showView('#content', new StartView());
     },
 
-    wineDetails:function (id) {
-        this.before(function () {
-            var wine = app.wineList.get(id);
-            
-        });
+    showRiders:function (id) {
+        app.showView('#content', new RidersView({model:id}));
     },
-
     showView:function (selector, view) {
         if (this.currentView)
             this.currentView.close();
@@ -36,10 +33,10 @@ var AppRouter = Backbone.Router.extend({
         this.currentView = view;
         return view;
     }
-
+    
 });
 
-tpl.loadTemplates(['start'], function () {
+tpl.loadTemplates(['start', ['riders']], function () {
     app = new AppRouter();
     Backbone.history.start();
 });
